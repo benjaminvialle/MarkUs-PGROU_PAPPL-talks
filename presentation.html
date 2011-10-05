@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>None</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="/usr/local/lib/python2.7/dist-packages/landslide-1.0.0-py2.7.egg/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="/usr/local/lib/python2.7/dist-packages/landslide-1.0.0-py2.7.egg/landslide/themes/default/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="/usr/local/lib/python2.7/dist-packages/landslide-1.0.0-py2.7.egg/landslide/themes/default/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: presentation/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><img alt="markus" src="presentation/markus_logo_big.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/0.md">presentation/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>MarkUs</h1></header>
+            
+            
+            <section><p>MarkUs (pronounced "mark us") is an open-source tool which recreates the ease and flexibility of grading assignments with pen on paper, within a web application. It also allows students and instructors to form groups, and collaborate on assignments.</p>
+<p>The MarkUs project is written in <code>Ruby</code> using the <code>Ruby on Rails</code> framework. MarkUs is based on various Open Source softwares, such as <code>Subversion</code>, <code>PostgreSQL/MySQL</code>…</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/0.md">presentation/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Web Application</h1></header>
+            
+            
+            <section><ul>
+<li>Web browser</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/1.md">presentation/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Installation</h1></header>
+            
+            
+            <section><h2>Prerequisites</h2>
+<ul>
+<li>GNU/Linux installation (<code>Ubuntu</code>, <code>Debian</code>, <code>Fedora</code>, <code>Mandriva</code>, …)</li>
+<li>MySQL/PostgreSQL (needed for PDF conversion or test framework) and headers libraries</li>
+<li>Ruby 1.8.7 and Rubygems ( &gt;= 1.3.7)</li>
+<li>git and a Github account</li>
+<li>svn and libsvn-ruby (svn Ruby bindings)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/2.md">presentation/2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/3_migration/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Migrations (1/3)</h1></header>
+            
+            
+            <section><h2>Load schema in database</h2>
+<p><code>Ruby on Rails</code> will load the schema in the database (the backend doesn't matter) with <code>bundle exec rake db:schema:load</code>.</p>
+<h2>Populate the database with fake datas</h2>
+<p>You can also populate the database with students, graders, admin, assignments with <code>bundle exec rake db:populate</code>. Take a look at <em>db/populate/*.rb</em> files.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/3_migration/0.md">presentation/3_migration/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/3_migration/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Migrations (2/3)</h1></header>
+            
+            
+            <section><h2>Agile development with migrations</h2>
+<p>Migrations and iterations are the agile way to construct databases.</p>
+<p><em>db/migrate/20100812195558_create_test_file.rb:</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="k">class</span> <span class="nc">CreateTestFile</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+<span class="lineno"> 2</span>   <span class="kp">extend</span> <span class="no">MigrationHelpers</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span>   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">up</span>
+<span class="lineno"> 5</span>     <span class="n">create_table</span> <span class="ss">:test_files</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+<span class="lineno"> 6</span>       <span class="n">t</span><span class="o">.</span><span class="n">column</span> <span class="ss">:filename</span><span class="p">,</span> <span class="ss">:string</span>
+<span class="lineno"> 7</span>       <span class="n">t</span><span class="o">.</span><span class="n">column</span> <span class="ss">:assignment_id</span><span class="p">,</span> <span class="ss">:int</span>
+<span class="lineno"> 8</span>       <span class="n">t</span><span class="o">.</span><span class="n">column</span> <span class="ss">:filetype</span><span class="p">,</span> <span class="ss">:string</span>
+<span class="lineno"> 9</span>       <span class="n">t</span><span class="o">.</span><span class="n">column</span> <span class="ss">:is_private</span><span class="p">,</span> <span class="ss">:boolean</span>
+<span class="lineno">10</span>       <span class="n">t</span><span class="o">.</span><span class="n">column</span> <span class="ss">:created_at</span><span class="p">,</span> <span class="ss">:timestamp</span>
+<span class="lineno">11</span>       <span class="n">t</span><span class="o">.</span><span class="n">column</span> <span class="ss">:updated_at</span><span class="p">,</span> <span class="ss">:timestamp</span>
+<span class="lineno">12</span>     <span class="k">end</span>
+<span class="lineno">13</span>     <span class="n">add_index</span> <span class="ss">:test_files</span><span class="p">,</span> <span class="o">[</span><span class="ss">:assignment_id</span><span class="p">,</span> <span class="ss">:filename</span><span class="o">]</span><span class="p">,</span>
+<span class="lineno">14</span>               <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">&quot;index_test_files_on_assignment_id_and_filename&quot;</span><span class="p">,</span>
+<span class="lineno">15</span>               <span class="ss">:unique</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="lineno">16</span>   <span class="k">end</span>
+<span class="lineno">17</span> 
+<span class="lineno">18</span>   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">down</span>
+<span class="lineno">19</span>     <span class="n">drop_table</span> <span class="ss">:test_files</span> <span class="k">if</span> <span class="n">table_exists?</span><span class="p">(</span><span class="ss">:test_files</span><span class="p">)</span>
+<span class="lineno">20</span>   <span class="k">end</span>
+<span class="lineno">21</span> <span class="k">end</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/3_migration/1.md">presentation/3_migration/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/3_migration/2.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Migrations (3/3)</h1></header>
+            
+            
+            <section><h2>Agile development with migrations</h2>
+<p>Run or rollback migrations with <code>bundle exec rake db:migrate</code> and <code>bundle exec rake db:rollback</code>.</p>
+<p>It creates a <code>Ruby</code> schema file, used by the <code>Ruby on Rails</code> Model` to interact with objects.</p>
+<p><em>db/schema.rb:</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c1"># This file is auto-generated from the current state of the database. Instead</span>
+<span class="lineno"> 2</span> <span class="c1"># of editing this file, please use the migrations feature of Active Record to</span>
+<span class="lineno"> 3</span> <span class="c1"># incrementally modify your database, and then regenerate this schema definition.</span>
+<span class="lineno"> 4</span> <span class="c1"># It&#39;s strongly recommended to check this file into your version control system.</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Schema</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="ss">:version</span> <span class="o">=&gt;</span> <span class="mi">20110313200240</span><span class="p">)</span> <span class="k">do</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>   <span class="n">create_table</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="ss">:force</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+<span class="lineno"> 9</span>     <span class="n">t</span><span class="o">.</span><span class="n">text</span>     <span class="s2">&quot;annotation_category_name&quot;</span>
+<span class="lineno">10</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;created_at&quot;</span>
+<span class="lineno">11</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;updated_at&quot;</span>
+<span class="lineno">12</span>     <span class="n">t</span><span class="o">.</span><span class="n">integer</span>  <span class="s2">&quot;assignment_id&quot;</span><span class="p">,</span>            <span class="ss">:null</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+<span class="lineno">13</span>   <span class="k">end</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>   <span class="n">add_index</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;assignment_id&quot;</span><span class="o">]</span><span class="p">,</span>
+<span class="lineno">16</span>              <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">&quot;index_annotation_categories_on_assignment_id&quot;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/3_migration/2.md">presentation/3_migration/2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/4_bundler/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Bundler (1/2)</h1></header>
+            
+            
+            <section><h2>Gemfile and Gem management</h2>
+<p>Librairies are called gem and there is a tool to manage them, called <code>Rubygems</code>.</p>
+<p>Put all needed gems in the <em>Gemfile</em> and run <code>bundle install</code> to install them.</p>
+<p><em>Gemfile:</em></p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="c1"># Make sure to decleare at least one &#39;source&#39;</span>
+<span class="lineno">2</span> <span class="n">source</span> <span class="s1">&#39;http://rubygems.org&#39;</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="c1"># Bundler requires these gems in all environments</span>
+<span class="lineno">5</span> <span class="n">gem</span> <span class="s2">&quot;rails&quot;</span>
+<span class="lineno">6</span> <span class="n">gem</span> <span class="s1">&#39;exception_notification&#39;</span>
+<span class="lineno">7</span> <span class="c1">#gem &quot;prototype-rails&quot; Will be needed with Rails3.1</span>
+<span class="lineno">8</span> <span class="n">gem</span> <span class="s2">&quot;db_populate&quot;</span>
+<span class="lineno">9</span> <span class="n">gem</span> <span class="s2">&quot;rubyzip&quot;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/4_bundler/0.md">presentation/4_bundler/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/4_bundler/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Bundler (2/2)</h1></header>
+            
+            
+            <section><h2>Gemfile and Gem management</h2>
+<p>Gems dependencies and configurations are stored in Gemfile.lock, generated with the <code>bundle install</code> command</p>
+<p><em>Gemfile.lock:</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="no">GEM</span>
+<span class="lineno"> 2</span>   <span class="n">remote</span><span class="p">:</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">rubygems</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
+<span class="lineno"> 3</span>   <span class="n">specs</span><span class="p">:</span>
+<span class="lineno"> 4</span>     <span class="n">rack</span><span class="o">-</span><span class="n">mount</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">6</span><span class="o">.</span><span class="mi">14</span><span class="p">)</span>
+<span class="lineno"> 5</span>       <span class="n">rack</span> <span class="p">(</span><span class="o">&gt;=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno"> 6</span>     <span class="n">rack</span><span class="o">-</span><span class="nb">test</span> <span class="p">(</span><span class="mi">0</span><span class="o">.</span><span class="mi">5</span><span class="o">.</span><span class="mi">7</span><span class="p">)</span>
+<span class="lineno"> 7</span>       <span class="n">rack</span> <span class="p">(</span><span class="o">&gt;=</span> <span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno"> 8</span>     <span class="n">railroady</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+<span class="lineno"> 9</span>     <span class="n">rails</span> <span class="p">(</span><span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno">10</span>       <span class="n">actionmailer</span> <span class="p">(</span><span class="o">=</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno">11</span>       <span class="n">actionpack</span> <span class="p">(</span><span class="o">=</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno">12</span>       <span class="n">activerecord</span> <span class="p">(</span><span class="o">=</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno">13</span>       <span class="n">activeresource</span> <span class="p">(</span><span class="o">=</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno">14</span>       <span class="n">activesupport</span> <span class="p">(</span><span class="o">=</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+<span class="lineno">15</span>       <span class="n">bundler</span> <span class="p">(</span><span class="o">~&gt;</span> <span class="mi">1</span><span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+<span class="lineno">16</span>       <span class="n">railties</span> <span class="p">(</span><span class="o">=</span> <span class="mi">3</span><span class="o">.</span><span class="mi">0</span><span class="o">.</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/4_bundler/1.md">presentation/4_bundler/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/5_git/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Git</h1></header>
+            
+            
+            <section><h2>SCM used for MarkUs source code</h2>
+<p><code>Git</code> is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals.</p>
+<p><img alt="git-workflow" height="420" width="400" src="presentation/5_git/git-workflow.png" title="Git Workflow" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/5_git/0.md">presentation/5_git/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/5_git/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Git</h1></header>
+            
+            
+            <section><h2>Example of workflow</h2>
+<p><img alt="git" src="presentation/5_git/git-workflow2.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/5_git/1.md">presentation/5_git/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/11
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">MarkUs</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Web Application</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Installation</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Migrations (1/3)</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Migrations (2/3)</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Migrations (3/3)</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">Bundler (1/2)</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">Bundler (2/2)</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Git</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Git</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>

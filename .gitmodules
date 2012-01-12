@@ -1,0 +1,3 @@
+[submodule "landslide"]
+	path = landslide
+	url = https://github.com/adamzap/landslide.git

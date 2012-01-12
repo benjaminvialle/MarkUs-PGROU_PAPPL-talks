@@ -28,14 +28,14 @@
     <title>None</title>
     <!-- Styles -->
     
-    <link rel="stylesheet" media="print" href="/usr/lib/python2.7/dist-packages/landslide/themes/default/css/print.css">
-    <link rel="stylesheet" media="screen, projection" href="/usr/lib/python2.7/dist-packages/landslide/themes/default/css/screen.css">
+    <link rel="stylesheet" media="print" href="/usr/local/lib/python2.7/dist-packages/landslide/themes/default/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="/usr/local/lib/python2.7/dist-packages/landslide/themes/default/css/screen.css">
     
     
     <!-- /Styles -->
     <!-- Javascripts -->
     
-    <script type="text/javascript" src="/usr/lib/python2.7/dist-packages/landslide/themes/default/js/slides.js"></script>
+    <script type="text/javascript" src="/usr/local/lib/python2.7/dist-packages/landslide/themes/default/js/slides.js"></script>
     
     
     <!-- /Javascripts -->
@@ -70,7 +70,7 @@
             </aside>
             
             <aside class="page_number">
-              1/15
+              1/22
             </aside>
           </footer>
         </div>
@@ -101,7 +101,7 @@
             </aside>
             
             <aside class="page_number">
-              2/15
+              2/22
             </aside>
           </footer>
         </div>
@@ -133,7 +133,181 @@
             </aside>
             
             <aside class="page_number">
-              3/15
+              3/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/100_Plagiat/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Databases (1/4)</h1></header>
+            
+            
+            <section><h2>MarkUs stores informations in database</h2>
+<ul>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+</ul>
+<p>Only for development and limitated (non-concurrency access)</p>
+<ul>
+<li>SQLite</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/100_Plagiat/0.md">presentation/100_Plagiat/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/100_Plagiat/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Databases (2/4)</h1></header>
+            
+            
+            <section><h2>Configuration</h2>
+<p><em>config/database.yml</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+<span class="lineno"> 2</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="lineno"> 3</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
+<span class="lineno"> 4</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_development</span>
+<span class="lineno"> 5</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
+<span class="lineno"> 6</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="l-Scalar-Plain">test</span><span class="p-Indicator">:</span>
+<span class="lineno"> 9</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="lineno">10</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
+<span class="lineno">11</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_test</span>
+<span class="lineno">12</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
+<span class="lineno">13</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span> <span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+<span class="lineno">16</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="lineno">17</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
+<span class="lineno">18</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_production</span>
+<span class="lineno">19</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
+<span class="lineno">20</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/100_Plagiat/1.md">presentation/100_Plagiat/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/100_Plagiat/2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Databases (3/4)</h1></header>
+            
+            
+            <section><h2>Interact with database</h2>
+<p>Create the database with <code>bundle exec rake db:create</code>, the load the schema with <code>bundle exec rake db:schema:load</code>.</p>
+<p>You can also populate the database with faked datas (very usable for development) : <code>bundle exec rake db:populate</code></p>
+<p>By default, Rails will focus on development environment : it is the development database that will be created. To work with other modes; consider using the RAILS_ENV=production or RAILS_ENV=test variable before each bundle statement.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/100_Plagiat/2.md">presentation/100_Plagiat/2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/100_Plagiat/3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Databases (4/4)</h1></header>
+            
+            
+            <section><h2>Schema</h2>
+<p>Rails keep a schema of the database in a file called <em>schema.rb</em>.</p>
+<p><em>db/schema.rb:</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c1"># This file is auto-generated from the current state of the database. Instead</span>
+<span class="lineno"> 2</span> <span class="c1"># of editing this file, please use the migrations feature of Active Record to</span>
+<span class="lineno"> 3</span> <span class="c1"># incrementally modify your database, and then regenerate this schema definition.</span>
+<span class="lineno"> 4</span> <span class="c1"># It&#39;s strongly recommended to check this file into your version control system.</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Schema</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="ss">:version</span> <span class="o">=&gt;</span> <span class="mi">20110313200240</span><span class="p">)</span> <span class="k">do</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>   <span class="n">create_table</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="ss">:force</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+<span class="lineno"> 9</span>     <span class="n">t</span><span class="o">.</span><span class="n">text</span>     <span class="s2">&quot;annotation_category_name&quot;</span>
+<span class="lineno">10</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;created_at&quot;</span>
+<span class="lineno">11</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;updated_at&quot;</span>
+<span class="lineno">12</span>     <span class="n">t</span><span class="o">.</span><span class="n">integer</span>  <span class="s2">&quot;assignment_id&quot;</span><span class="p">,</span>            <span class="ss">:null</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+<span class="lineno">13</span>   <span class="k">end</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>   <span class="n">add_index</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;assignment_id&quot;</span><span class="o">]</span><span class="p">,</span>
+<span class="lineno">16</span>              <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">&quot;index_annotation_categories_on_assignment_id&quot;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/100_Plagiat/3.md">presentation/100_Plagiat/3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/22
             </aside>
           </footer>
         </div>
@@ -170,7 +344,181 @@
             </aside>
             
             <aside class="page_number">
-              4/15
+              8/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/2_databases/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Databases (1/4)</h1></header>
+            
+            
+            <section><h2>MarkUs stores informations in database</h2>
+<ul>
+<li>PostgreSQL</li>
+<li>MySQL</li>
+</ul>
+<p>Only for development and limitated (non-concurrency access)</p>
+<ul>
+<li>SQLite</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/2_databases/0.md">presentation/2_databases/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/2_databases/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Databases (2/4)</h1></header>
+            
+            
+            <section><h2>Configuration</h2>
+<p><em>config/database.yml</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+<span class="lineno"> 2</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="lineno"> 3</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
+<span class="lineno"> 4</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_development</span>
+<span class="lineno"> 5</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
+<span class="lineno"> 6</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="l-Scalar-Plain">test</span><span class="p-Indicator">:</span>
+<span class="lineno"> 9</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="lineno">10</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
+<span class="lineno">11</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_test</span>
+<span class="lineno">12</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
+<span class="lineno">13</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span> <span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+<span class="lineno">16</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
+<span class="lineno">17</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
+<span class="lineno">18</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_production</span>
+<span class="lineno">19</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
+<span class="lineno">20</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/2_databases/1.md">presentation/2_databases/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/2_databases/2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Databases (3/4)</h1></header>
+            
+            
+            <section><h2>Interact with database</h2>
+<p>Create the database with <code>bundle exec rake db:create</code>, the load the schema with <code>bundle exec rake db:schema:load</code>.</p>
+<p>You can also populate the database with faked datas (very usable for development) : <code>bundle exec rake db:populate</code></p>
+<p>By default, Rails will focus on development environment : it is the development database that will be created. To work with other modes; consider using the RAILS_ENV=production or RAILS_ENV=test variable before each bundle statement.</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/2_databases/2.md">presentation/2_databases/2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/22
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/2_databases/3.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>Databases (4/4)</h1></header>
+            
+            
+            <section><h2>Schema</h2>
+<p>Rails keep a schema of the database in a file called <em>schema.rb</em>.</p>
+<p><em>db/schema.rb:</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c1"># This file is auto-generated from the current state of the database. Instead</span>
+<span class="lineno"> 2</span> <span class="c1"># of editing this file, please use the migrations feature of Active Record to</span>
+<span class="lineno"> 3</span> <span class="c1"># incrementally modify your database, and then regenerate this schema definition.</span>
+<span class="lineno"> 4</span> <span class="c1"># It&#39;s strongly recommended to check this file into your version control system.</span>
+<span class="lineno"> 5</span> 
+<span class="lineno"> 6</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Schema</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="ss">:version</span> <span class="o">=&gt;</span> <span class="mi">20110313200240</span><span class="p">)</span> <span class="k">do</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span>   <span class="n">create_table</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="ss">:force</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+<span class="lineno"> 9</span>     <span class="n">t</span><span class="o">.</span><span class="n">text</span>     <span class="s2">&quot;annotation_category_name&quot;</span>
+<span class="lineno">10</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;created_at&quot;</span>
+<span class="lineno">11</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;updated_at&quot;</span>
+<span class="lineno">12</span>     <span class="n">t</span><span class="o">.</span><span class="n">integer</span>  <span class="s2">&quot;assignment_id&quot;</span><span class="p">,</span>            <span class="ss">:null</span> <span class="o">=&gt;</span> <span class="kp">false</span>
+<span class="lineno">13</span>   <span class="k">end</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>   <span class="n">add_index</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;assignment_id&quot;</span><span class="o">]</span><span class="p">,</span>
+<span class="lineno">16</span>              <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">&quot;index_annotation_categories_on_assignment_id&quot;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/2_databases/3.md">presentation/2_databases/3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/22
             </aside>
           </footer>
         </div>
@@ -203,7 +551,7 @@
             </aside>
             
             <aside class="page_number">
-              5/15
+              13/22
             </aside>
           </footer>
         </div>
@@ -258,7 +606,7 @@
             </aside>
             
             <aside class="page_number">
-              6/15
+              14/22
             </aside>
           </footer>
         </div>
@@ -309,7 +657,7 @@
             </aside>
             
             <aside class="page_number">
-              7/15
+              15/22
             </aside>
           </footer>
         </div>
@@ -353,7 +701,7 @@
             </aside>
             
             <aside class="page_number">
-              8/15
+              16/22
             </aside>
           </footer>
         </div>
@@ -403,7 +751,7 @@
             </aside>
             
             <aside class="page_number">
-              9/15
+              17/22
             </aside>
           </footer>
         </div>
@@ -414,7 +762,7 @@
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Git</h1></header>
+            <header><h1>Git (1/5)</h1></header>
             
             
             <section><h2>SCM used for MarkUs source code</h2>
@@ -435,7 +783,7 @@
             </aside>
             
             <aside class="page_number">
-              10/15
+              18/22
             </aside>
           </footer>
         </div>
@@ -446,7 +794,7 @@
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Git</h1></header>
+            <header><h1>Git (2/5)</h1></header>
             
             
             <section><h2>Example of workflow</h2>
@@ -466,82 +814,29 @@
             </aside>
             
             <aside class="page_number">
-              11/15
+              19/22
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: presentation/6_databases/0.md -->
+      <!-- slide source: presentation/5_git/2.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Databases</h1></header>
+            <header><h1>Git (3/5)</h1></header>
             
             
-            <section><h2>MarkUs stores informations in database</h2>
-<ul>
-<li>PostgreSQL</li>
-<li>MySQL</li>
-</ul>
-<p>Only for development and limitated (non-concurrency access)</p>
-<ul>
-<li>SQLite</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="presentation/6_databases/0.md">presentation/6_databases/0.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              12/15
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: presentation/6_databases/1.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_code">
-          <div class="inner">
-            
-            <header><h1>Databases</h1></header>
-            
-            
-            <section><h2>Configuration</h2>
-<p><em>config/database.yml</em></p>
-<div class="highlight"><pre><span class="lineno"> 1</span> <span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
-<span class="lineno"> 2</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
-<span class="lineno"> 3</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
-<span class="lineno"> 4</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_development</span>
-<span class="lineno"> 5</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
-<span class="lineno"> 6</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
-<span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="l-Scalar-Plain">test</span><span class="p-Indicator">:</span>
-<span class="lineno"> 9</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
-<span class="lineno">10</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
-<span class="lineno">11</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_test</span>
-<span class="lineno">12</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
-<span class="lineno">13</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
-<span class="lineno">14</span> 
-<span class="lineno">15</span> <span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
-<span class="lineno">16</span>   <span class="l-Scalar-Plain">adapter</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">mysql</span>
-<span class="lineno">17</span>   <span class="l-Scalar-Plain">encoding</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">utf8</span>
-<span class="lineno">18</span>   <span class="l-Scalar-Plain">database</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus_production</span>
-<span class="lineno">19</span>   <span class="l-Scalar-Plain">username</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">markus</span>
-<span class="lineno">20</span>   <span class="l-Scalar-Plain">password</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">secret_p@ssw0rd</span>
-</pre></div>
-</section>
+            <section><h2>Basics</h2>
+<p>$ <code>git init</code></p>
+<p>$ <code>git add .</code></p>
+<p>$ <code>git commit -m "My first backup"</code></p>
+<h2>Roll back</h2>
+<p>$ <code>git reset --hard</code></p>
+<h2>Save the state</h2>
+<p>$ <code>git commit -a -m "Another backup"</code></p>
+<p>$ <code>git add readme.txt Documentation</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -553,28 +848,33 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/6_databases/1.md">presentation/6_databases/1.md</a>
+              Source: <a href="presentation/5_git/2.md">presentation/5_git/2.md</a>
             </aside>
             
             <aside class="page_number">
-              13/15
+              20/22
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: presentation/6_databases/2.md -->
+      <!-- slide source: presentation/5_git/3.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Databases (3/4)</h1></header>
+            <header><h1>Git (4/5)</h1></header>
             
             
-            <section><h2>Interact with database</h2>
-<p>Create the database with <code>bundle exec rake db:create</code>, the load the schema with <code>bundle exec rake db:schema:load</code>.</p>
-<p>You can also populate the database with faked datas (very usable for development) : <code>bundle exec rake db:populate</code></p>
-<p>By default, Rails will focus on development environment : it is the development database that will be created. To work with other modes; consider using the RAILS_ENV=production or RAILS_ENV=test variable before each bundle statement.</p></section>
+            <section><h2>Remove</h2>
+<p>Similarly, if you want Git to forget about certain files:</p>
+<p>$ <code>git rm kludge.h obsolete.c</code></p>
+<p>$ <code>git rm -r incriminating/evidence/</code></p>
+<h2>Rename</h2>
+<p>$ <code>git mv bug.c feature.c</code></p>
+<h2>Log</h2>
+<p>$ <code>git log</code></p>
+<p>$ <code>git reset --hard 766f</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -586,45 +886,35 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/6_databases/2.md">presentation/6_databases/2.md</a>
+              Source: <a href="presentation/5_git/3.md">presentation/5_git/3.md</a>
             </aside>
             
             <aside class="page_number">
-              14/15
+              21/22
             </aside>
           </footer>
         </div>
       </div>
       
-      <!-- slide source: presentation/6_databases/3.md -->
+      <!-- slide source: presentation/5_git/4.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code">
+        <div class="slide">
           <div class="inner">
             
-            <header><h1>Databases (3/4)</h1></header>
+            <header><h1>Git (5/5)</h1></header>
             
             
-            <section><h2>Schema</h2>
-<p>Rails keep a schema of the database in a file called <em>schema.rb</em>.</p>
-<p><em>db/schema.rb:</em></p>
-<div class="highlight"><pre><span class="lineno"> 1</span> <span class="c1"># This file is auto-generated from the current state of the database. Instead</span>
-<span class="lineno"> 2</span> <span class="c1"># of editing this file, please use the migrations feature of Active Record to</span>
-<span class="lineno"> 3</span> <span class="c1"># incrementally modify your database, and then regenerate this schema definition.</span>
-<span class="lineno"> 4</span> <span class="c1"># It&#39;s strongly recommended to check this file into your version control system.</span>
-<span class="lineno"> 5</span> 
-<span class="lineno"> 6</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Schema</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="ss">:version</span> <span class="o">=&gt;</span> <span class="mi">20110313200240</span><span class="p">)</span> <span class="k">do</span>
-<span class="lineno"> 7</span> 
-<span class="lineno"> 8</span>   <span class="n">create_table</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="ss">:force</span> <span class="o">=&gt;</span> <span class="kp">true</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
-<span class="lineno"> 9</span>     <span class="n">t</span><span class="o">.</span><span class="n">text</span>     <span class="s2">&quot;annotation_category_name&quot;</span>
-<span class="lineno">10</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;created_at&quot;</span>
-<span class="lineno">11</span>     <span class="n">t</span><span class="o">.</span><span class="n">datetime</span> <span class="s2">&quot;updated_at&quot;</span>
-<span class="lineno">12</span>     <span class="n">t</span><span class="o">.</span><span class="n">integer</span>  <span class="s2">&quot;assignment_id&quot;</span><span class="p">,</span>            <span class="ss">:null</span> <span class="o">=&gt;</span> <span class="kp">false</span>
-<span class="lineno">13</span>   <span class="k">end</span>
-<span class="lineno">14</span> 
-<span class="lineno">15</span>   <span class="n">add_index</span> <span class="s2">&quot;annotation_categories&quot;</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;assignment_id&quot;</span><span class="o">]</span><span class="p">,</span>
-<span class="lineno">16</span>              <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="s2">&quot;index_annotation_categories_on_assignment_id&quot;</span>
-</pre></div>
-</section>
+            <section><h2>Change state</h2>
+<p>$ <code>git checkout 82f5</code></p>
+<p>$ <code>git checkout master</code></p>
+<h2>Commit everything</h2>
+<p>$ <code>git commit -a</code></p>
+<h2>Clone a repository</h2>
+<p>$ <code>git clone git://server/path/to/files</code></p>
+<h2>What changed?</h2>
+<p>$ <code>git diff</code></p>
+<p>$ <code>git diff 1b6d "master~2"</code></p>
+<p>$ <code>git whatchanged --since="2 weeks ago"</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -636,11 +926,11 @@
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/6_databases/3.md">presentation/6_databases/3.md</a>
+              Source: <a href="presentation/5_git/4.md">presentation/5_git/4.md</a>
             </aside>
             
             <aside class="page_number">
-              15/15
+              22/22
             </aside>
           </footer>
         </div>
@@ -673,74 +963,116 @@
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Installation</a></th>
+        <th><a href="#slide4">Databases (1/4)</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Migrations (1/3)</a></th>
+        <th><a href="#slide5">Databases (2/4)</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Migrations (2/3)</a></th>
+        <th><a href="#slide6">Databases (3/4)</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Migrations (3/3)</a></th>
+        <th><a href="#slide7">Databases (4/4)</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">Bundler (1/2)</a></th>
+        <th><a href="#slide8">Installation</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Bundler (2/2)</a></th>
+        <th><a href="#slide9">Databases (1/4)</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Git</a></th>
+        <th><a href="#slide10">Databases (2/4)</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Git</a></th>
+        <th><a href="#slide11">Databases (3/4)</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Databases</a></th>
+        <th><a href="#slide12">Databases (4/4)</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">Databases</a></th>
+        <th><a href="#slide13">Migrations (1/3)</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Databases (3/4)</a></th>
+        <th><a href="#slide14">Migrations (2/3)</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Databases (3/4)</a></th>
+        <th><a href="#slide15">Migrations (3/3)</a></th>
         <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Bundler (1/2)</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Bundler (2/2)</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Git (1/5)</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Git (2/5)</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">Git (3/5)</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">Git (4/5)</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">Git (5/5)</a></th>
+        <td><a href="#slide22">22</a></td>
       </tr>
       
       

@@ -70,7 +70,7 @@
             </aside>
             
             <aside class="page_number">
-              1/23
+              1/27
             </aside>
           </footer>
         </div>
@@ -101,7 +101,7 @@
             </aside>
             
             <aside class="page_number">
-              2/23
+              2/27
             </aside>
           </footer>
         </div>
@@ -133,7 +133,7 @@
             </aside>
             
             <aside class="page_number">
-              3/23
+              3/27
             </aside>
           </footer>
         </div>
@@ -170,7 +170,7 @@
             </aside>
             
             <aside class="page_number">
-              4/23
+              4/27
             </aside>
           </footer>
         </div>
@@ -208,7 +208,7 @@
             </aside>
             
             <aside class="page_number">
-              5/23
+              5/27
             </aside>
           </footer>
         </div>
@@ -261,7 +261,7 @@
             </aside>
             
             <aside class="page_number">
-              6/23
+              6/27
             </aside>
           </footer>
         </div>
@@ -294,7 +294,7 @@
             </aside>
             
             <aside class="page_number">
-              7/23
+              7/27
             </aside>
           </footer>
         </div>
@@ -344,7 +344,38 @@
             </aside>
             
             <aside class="page_number">
-              8/23
+              8/27
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/3.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Pro tips</h1></header>
+            
+            
+            <section><h2>Find code</h2>
+<p><code>find app/ -name "*" -exec grep -Hn --color "def index" {} \;</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/3.md">presentation/3.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/27
             </aside>
           </footer>
         </div>
@@ -377,7 +408,7 @@
             </aside>
             
             <aside class="page_number">
-              9/23
+              10/27
             </aside>
           </footer>
         </div>
@@ -432,7 +463,7 @@
             </aside>
             
             <aside class="page_number">
-              10/23
+              11/27
             </aside>
           </footer>
         </div>
@@ -483,7 +514,7 @@
             </aside>
             
             <aside class="page_number">
-              11/23
+              12/27
             </aside>
           </footer>
         </div>
@@ -527,7 +558,7 @@
             </aside>
             
             <aside class="page_number">
-              12/23
+              13/27
             </aside>
           </footer>
         </div>
@@ -577,7 +608,7 @@
             </aside>
             
             <aside class="page_number">
-              13/23
+              14/27
             </aside>
           </footer>
         </div>
@@ -609,7 +640,7 @@
             </aside>
             
             <aside class="page_number">
-              14/23
+              15/27
             </aside>
           </footer>
         </div>
@@ -640,7 +671,7 @@
             </aside>
             
             <aside class="page_number">
-              15/23
+              16/27
             </aside>
           </footer>
         </div>
@@ -678,7 +709,7 @@
             </aside>
             
             <aside class="page_number">
-              16/23
+              17/27
             </aside>
           </footer>
         </div>
@@ -716,7 +747,7 @@
             </aside>
             
             <aside class="page_number">
-              17/23
+              18/27
             </aside>
           </footer>
         </div>
@@ -756,7 +787,7 @@
             </aside>
             
             <aside class="page_number">
-              18/23
+              19/27
             </aside>
           </footer>
         </div>
@@ -807,7 +838,7 @@ Completed 200 OK in 853ms (Views: 536.6ms | ActiveRecord: 91.5ms)
             </aside>
             
             <aside class="page_number">
-              19/23
+              20/27
             </aside>
           </footer>
         </div>
@@ -855,7 +886,116 @@ type: "Student", created_at: "2011-12-22 14:32:02", updated_at: "2011-12-22
             </aside>
             
             <aside class="page_number">
-              20/23
+              21/27
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/98_PDF/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>MarkUs-PDF (1/3)</h1></header>
+            
+            
+            <section><h2>State of the art</h2>
+<p>Summer 2009, Anton B., a Canadian Student in the University of Toronto, wrote
+the PDF concersion mechanism.</p>
+<p>Ask your mentor ;-) --&gt; Benjamin V.</p>
+<h2>Please read:</h2>
+<ul>
+<li>Blog posts about PDF conversion</li>
+</ul>
+<h2>Interesting files</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/98_PDF/0.md">presentation/98_PDF/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/27
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/98_PDF/1.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MarkUs-PDF (2/3)</h1></header>
+            
+            
+            <section><h2>How it works</h2>
+<p>There is a SubmissionCollectorProcess, collection submissions and converting
+PDF to images, using ImageMagick.</p>
+<p>ImageMagick is called directly from command line</p>
+<p><em>app/models/submission_file.rb:</em></p>
+<div class="highlight"><pre><span class="lineno">1</span> <span class="sb">`convert -limit memory</span>
+<span class="lineno">2</span> <span class="si">#{</span><span class="no">MarkusConfigurator</span><span class="o">.</span><span class="n">markus_config_pdf_conv_memory_allowance</span><span class="si">}</span><span class="sb"> -limit map 0</span>
+<span class="lineno">3</span> <span class="sb">-density 150 -resize 66% </span><span class="si">#{</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">storage_path</span><span class="p">,</span> <span class="nb">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="sb"> -append</span>
+<span class="lineno">4</span> <span class="si">#{</span><span class="n">file_path</span><span class="si">}</span><span class="sb"> &gt;&gt; </span><span class="si">#{</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">RAILS_ROOT</span><span class="p">,</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="s2">&quot;export-pdf.log&quot;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span>
+</pre></div>
+
+<p>The issue is here !</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/98_PDF/1.md">presentation/98_PDF/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/27
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/98_PDF/2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>MarkUs-PDF (3/3)</h1></header>
+            
+            
+            <section><h2>TODO ?</h2></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/98_PDF/2.md">presentation/98_PDF/2.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/27
             </aside>
           </footer>
         </div>
@@ -895,7 +1035,7 @@ type: "Student", created_at: "2011-12-22 14:32:02", updated_at: "2011-12-22
             </aside>
             
             <aside class="page_number">
-              21/23
+              25/27
             </aside>
           </footer>
         </div>
@@ -926,7 +1066,7 @@ type: "Student", created_at: "2011-12-22 14:32:02", updated_at: "2011-12-22
             </aside>
             
             <aside class="page_number">
-              22/23
+              26/27
             </aside>
           </footer>
         </div>
@@ -971,7 +1111,7 @@ file is named build.xml.</p>
             </aside>
             
             <aside class="page_number">
-              23/23
+              27/27
             </aside>
           </footer>
         </div>
@@ -1034,92 +1174,116 @@ file is named build.xml.</p>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">Migrations (1/3)</a></th>
+        <th><a href="#slide9">Pro tips</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
       
       <tr id="toc-row-10">
-        <th><a href="#slide10">Migrations (2/3)</a></th>
+        <th><a href="#slide10">Migrations (1/3)</a></th>
         <td><a href="#slide10">10</a></td>
       </tr>
       
       
       <tr id="toc-row-11">
-        <th><a href="#slide11">Migrations (3/3)</a></th>
+        <th><a href="#slide11">Migrations (2/3)</a></th>
         <td><a href="#slide11">11</a></td>
       </tr>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Bundler (1/2)</a></th>
+        <th><a href="#slide12">Migrations (3/3)</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
       
       <tr id="toc-row-13">
-        <th><a href="#slide13">Bundler (2/2)</a></th>
+        <th><a href="#slide13">Bundler (1/2)</a></th>
         <td><a href="#slide13">13</a></td>
       </tr>
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">Git (1/5)</a></th>
+        <th><a href="#slide14">Bundler (2/2)</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">Git (2/5)</a></th>
+        <th><a href="#slide15">Git (1/5)</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">Git (3/5)</a></th>
+        <th><a href="#slide16">Git (2/5)</a></th>
         <td><a href="#slide16">16</a></td>
       </tr>
       
       
       <tr id="toc-row-17">
-        <th><a href="#slide17">Git (4/5)</a></th>
+        <th><a href="#slide17">Git (3/5)</a></th>
         <td><a href="#slide17">17</a></td>
       </tr>
       
       
       <tr id="toc-row-18">
-        <th><a href="#slide18">Git (5/5)</a></th>
+        <th><a href="#slide18">Git (4/5)</a></th>
         <td><a href="#slide18">18</a></td>
       </tr>
       
       
       <tr id="toc-row-19">
-        <th><a href="#slide19">Debugger (1/2)</a></th>
+        <th><a href="#slide19">Git (5/5)</a></th>
         <td><a href="#slide19">19</a></td>
       </tr>
       
       
       <tr id="toc-row-20">
-        <th><a href="#slide20">Debugger (2/2)</a></th>
+        <th><a href="#slide20">Debugger (1/2)</a></th>
         <td><a href="#slide20">20</a></td>
       </tr>
       
       
       <tr id="toc-row-21">
-        <th><a href="#slide21">MarkUs-Plagiat (1/3)</a></th>
+        <th><a href="#slide21">Debugger (2/2)</a></th>
         <td><a href="#slide21">21</a></td>
       </tr>
       
       
       <tr id="toc-row-22">
-        <th><a href="#slide22">MarkUs-Plagiat (2/3)</a></th>
+        <th><a href="#slide22">MarkUs-PDF (1/3)</a></th>
         <td><a href="#slide22">22</a></td>
       </tr>
       
       
       <tr id="toc-row-23">
-        <th><a href="#slide23">MarkUs-Plagiat (3/3)</a></th>
+        <th><a href="#slide23">MarkUs-PDF (2/3)</a></th>
         <td><a href="#slide23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide24">MarkUs-PDF (3/3)</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide25">MarkUs-Plagiat (1/3)</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">MarkUs-Plagiat (2/3)</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">MarkUs-Plagiat (3/3)</a></th>
+        <td><a href="#slide27">27</a></td>
       </tr>
       
       

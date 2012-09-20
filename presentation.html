@@ -150,8 +150,9 @@
             <section><h2>Prerequisites</h2>
 <ul>
 <li>GNU/Linux installation (<code>Ubuntu</code>, <code>Debian</code>, <code>Fedora</code>, <code>Mandriva</code>, …)</li>
-<li>MySQL/PostgreSQL (needed for PDF conversion or test framework) and headers libraries</li>
-<li>Ruby 1.8.7 and Rubygems ( &gt;= 1.3.7)</li>
+<li>MySQL/PostgreSQL and headers libraries</li>
+<li>Ruby 1.8.7 and Rubygems ( &gt;= 1.3.7) (or Ruby 1.9.3 with latest svn bindings compiled)</li>
+<li>Rails 3.0.x branch</li>
 <li>git and a Github account</li>
 <li>svn and libsvn-ruby (svn Ruby bindings)</li>
 </ul></section>
@@ -795,7 +796,7 @@
       
       <!-- slide source: presentation/6_debugger/0.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Debugger (1/2)</h1></header>
@@ -817,12 +818,12 @@
 </pre></div>
 
 <p><em>In your terminal:</em></p>
-<pre><code>!shell
-Completed 200 OK in 853ms (Views: 536.6ms | ActiveRecord: 91.5ms)
-/mnt/data/MarkUs/Markus/app/controllers/sections_controller.rb:11
-@sections = Section.find(:all)
-(rdb:1)
-</code></pre></section>
+<div class="highlight"><pre><span class="lineno">1</span> Completed 200 OK in 853ms <span class="o">(</span>Views: 536.6ms | ActiveRecord: 91.5ms<span class="o">)</span>
+<span class="lineno">2</span> /mnt/data/MarkUs/Markus/app/controllers/sections_controller.rb:11
+<span class="lineno">3</span> @sections <span class="o">=</span> Section.find<span class="o">(</span>:all<span class="o">)</span>
+<span class="lineno">4</span> <span class="o">(</span>rdb:1<span class="o">)</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -846,7 +847,7 @@ Completed 200 OK in 853ms (Views: 536.6ms | ActiveRecord: 91.5ms)
       
       <!-- slide source: presentation/6_debugger/1.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             <header><h1>Debugger (2/2)</h1></header>
@@ -856,21 +857,21 @@ Completed 200 OK in 853ms (Views: 536.6ms | ActiveRecord: 91.5ms)
 <p>Then just press <code>irb</code> you will be in an irb (Interactive RuBy) shell.</p>
 <p>You can have access to the same variables Ruby has access.</p>
 <p><em>In your terminal:</em></p>
-<pre><code>!shell
-(rdb:1) irb
-irb(#&lt;SectionsController:0x7f8da4c1ab68&gt;):001:0&gt; @section
-=&gt; nil
-irb(#&lt;SectionsController:0x7f8da4c1ab68&gt;):002:0&gt; Section.new
-=&gt; #&lt;Section id: nil, name: nil, created_at: nil, updated_at: nil&gt;
-irb(#&lt;SectionsController:0x7f8da4c1ab68&gt;):003:0&gt; s = Student.find(:all)
-=&gt; [#&lt;Student id: 3, user_name: "c8mahler", last_name: "Mahler",
-first_name: "Gustav", grace_credits: 0, type: "Student", created_at:
-"2011-12-22 14:32:02", updated_at: "2011-12-22 14:32:02", hidden: false,
-api_key: nil, section_id: nil, notes_count: 0&gt;, #&lt;Student id: 4, user_name:
-"c9magnar", last_name: "Magnard", first_name: "Alberic", grace_credits: 0,
-type: "Student", created_at: "2011-12-22 14:32:02", updated_at: "2011-12-22
-14:32:02", h…
-</code></pre></section>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="o">(</span>rdb:1<span class="o">)</span> irb
+<span class="lineno"> 2</span> irb<span class="o">(</span><span class="c">#&lt;SectionsController:0x7f8da4c1ab68&gt;):001:0&gt; @section</span>
+<span class="lineno"> 3</span> <span class="o">=</span>&gt; nil
+<span class="lineno"> 4</span> irb<span class="o">(</span><span class="c">#&lt;SectionsController:0x7f8da4c1ab68&gt;):002:0&gt; Section.new</span>
+<span class="lineno"> 5</span> <span class="o">=</span>&gt; <span class="c">#&lt;Section id: nil, name: nil, created_at: nil, updated_at: nil&gt;</span>
+<span class="lineno"> 6</span> irb<span class="o">(</span><span class="c">#&lt;SectionsController:0x7f8da4c1ab68&gt;):003:0&gt; s = Student.find(:all)</span>
+<span class="lineno"> 7</span> <span class="o">=</span>&gt; <span class="o">[</span><span class="c">#&lt;Student id: 3, user_name: &quot;c8mahler&quot;, last_name: &quot;Mahler&quot;,</span>
+<span class="lineno"> 8</span> first_name: <span class="s2">&quot;Gustav&quot;</span>, grace_credits: 0, <span class="nb">type</span>: <span class="s2">&quot;Student&quot;</span>, created_at:
+<span class="lineno"> 9</span> <span class="s2">&quot;2011-12-22 14:32:02&quot;</span>, updated_at: <span class="s2">&quot;2011-12-22 14:32:02&quot;</span>, hidden: <span class="nb">false</span>,
+<span class="lineno">10</span> api_key: nil, section_id: nil, notes_count: 0&gt;, <span class="c">#&lt;Student id: 4, user_name:</span>
+<span class="lineno">11</span> <span class="s2">&quot;c9magnar&quot;</span>, last_name: <span class="s2">&quot;Magnard&quot;</span>, first_name: <span class="s2">&quot;Alberic&quot;</span>, grace_credits: 0,
+<span class="lineno">12</span> <span class="nb">type</span>: <span class="s2">&quot;Student&quot;</span>, created_at: <span class="s2">&quot;2011-12-22 14:32:02&quot;</span>, updated_at: <span class="s2">&quot;2011-12-22</span>
+<span class="lineno">13</span> <span class="s2">14:32:02&quot;</span>, h…
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -892,23 +893,25 @@ type: "Student", created_at: "2011-12-22 14:32:02", updated_at: "2011-12-22
         </div>
       </div>
       
-      <!-- slide source: presentation/98_PDF/0.md -->
+      <!-- slide source: presentation/7_routes/0.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>MarkUs-PDF (1/3)</h1></header>
+            <header><h1>Routes (1/3)</h1></header>
             
             
-            <section><h2>State of the art</h2>
-<p>Summer 2009, Anton B., a Canadian Student in the University of Toronto, wrote
-the PDF concersion mechanism.</p>
-<p>Ask your mentor ;-) --&gt; Benjamin V.</p>
-<h2>Please read:</h2>
-<ul>
-<li>Blog posts about PDF conversion</li>
-</ul>
-<h2>Interesting files</h2></section>
+            <section><p>URL with access permitted through the application.
+Describe the http method used (GET, POST, PUT, DELETE).</p>
+<p>All routes are defined in match order, with names in <em>config/routes.rb</em></p>
+<p><em>Example:</em></p>
+<div class="highlight"><pre><span class="lineno">1</span> http://localhost:3000/en/assignments/2/edit
+<span class="lineno">2</span> http://localhost:3000/en/admins/2/edit
+<span class="lineno">3</span> http://localhost:3000/fr/tas/new
+<span class="lineno">4</span> http://localhost:3000/fr/assignments/download_csv_grades_report
+<span class="lineno">5</span> ...
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -920,7 +923,7 @@ the PDF concersion mechanism.</p>
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/98_PDF/0.md">presentation/98_PDF/0.md</a>
+              Source: <a href="presentation/7_routes/0.md">presentation/7_routes/0.md</a>
             </aside>
             
             <aside class="page_number">
@@ -930,26 +933,33 @@ the PDF concersion mechanism.</p>
         </div>
       </div>
       
-      <!-- slide source: presentation/98_PDF/1.md -->
+      <!-- slide source: presentation/7_routes/1.md -->
       <div class="slide-wrapper">
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>MarkUs-PDF (2/3)</h1></header>
+            <header><h1>Routes (2/3)</h1></header>
             
             
-            <section><h2>How it works</h2>
-<p>There is a SubmissionCollectorProcess, collection submissions and converting
-PDF to images, using ImageMagick.</p>
-<p>ImageMagick is called directly from command line</p>
-<p><em>app/models/submission_file.rb:</em></p>
-<div class="highlight"><pre><span class="lineno">1</span> <span class="sb">`convert -limit memory</span>
-<span class="lineno">2</span> <span class="si">#{</span><span class="no">MarkusConfigurator</span><span class="o">.</span><span class="n">markus_config_pdf_conv_memory_allowance</span><span class="si">}</span><span class="sb"> -limit map 0</span>
-<span class="lineno">3</span> <span class="sb">-density 150 -resize 66% </span><span class="si">#{</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">storage_path</span><span class="p">,</span> <span class="nb">self</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span><span class="si">}</span><span class="sb"> -append</span>
-<span class="lineno">4</span> <span class="si">#{</span><span class="n">file_path</span><span class="si">}</span><span class="sb"> &gt;&gt; </span><span class="si">#{</span><span class="no">File</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="no">RAILS_ROOT</span><span class="p">,</span> <span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="s2">&quot;export-pdf.log&quot;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span>
+            <section><h2>Tell me more</h2>
+<div class="highlight"><pre><span class="lineno"> 1</span> bundle <span class="nb">exec </span>rake routes
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> add_note_notes POST   /notes/add_note<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno"> 4</span> noteable_object_selector_notes POST   /notes/noteable_object_selector<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno"> 5</span> new_update_groupings_notes GET    /notes/new_update_groupings<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno"> 6</span>                            POST   /notes/new_update_groupings<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno"> 7</span> student_interface_note GET    /notes/:id/student_interface<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno"> 8</span> notes_dialog_note GET    /notes/:id/notes_dialog<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno"> 9</span> grades_note POST   /notes/:id/grades<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">10</span> notes GET    /notes<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">11</span>       POST   /notes<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">12</span> new_note GET    /notes/new<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">13</span> edit_note GET    /notes/:id/edit<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">14</span> note GET    /notes/:id<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">15</span>      PUT    /notes/:id<span class="o">(</span>.:format<span class="o">)</span>
+<span class="lineno">16</span>      DELETE /notes/:id<span class="o">(</span>.:format<span class="o">)</span>
 </pre></div>
-
-<p>The issue is here !</p></section>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -961,7 +971,7 @@ PDF to images, using ImageMagick.</p>
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/98_PDF/1.md">presentation/98_PDF/1.md</a>
+              Source: <a href="presentation/7_routes/1.md">presentation/7_routes/1.md</a>
             </aside>
             
             <aside class="page_number">
@@ -971,15 +981,35 @@ PDF to images, using ImageMagick.</p>
         </div>
       </div>
       
-      <!-- slide source: presentation/98_PDF/2.md -->
+      <!-- slide source: presentation/7_routes/2.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
-            <header><h1>MarkUs-PDF (3/3)</h1></header>
+            <header><h1>Routes (3/3)</h1></header>
             
             
-            <section><h2>TODO ?</h2></section>
+            <section><h2>Understanding routes</h2>
+<p><em>config/routes.rb:</em></p>
+<div class="highlight"><pre><span class="lineno"> 1</span> <span class="n">resources</span> <span class="ss">:main</span> <span class="k">do</span>
+<span class="lineno"> 2</span>   <span class="n">collection</span> <span class="k">do</span>
+<span class="lineno"> 3</span>     <span class="n">get</span> <span class="s1">&#39;logout&#39;</span>
+<span class="lineno"> 4</span>     <span class="n">get</span> <span class="s1">&#39;about&#39;</span>
+<span class="lineno"> 5</span>     <span class="n">post</span> <span class="s1">&#39;login_as&#39;</span>
+<span class="lineno"> 6</span>     <span class="n">get</span> <span class="s1">&#39;role_switch&#39;</span>
+<span class="lineno"> 7</span>     <span class="n">get</span> <span class="s1">&#39;clear_role_switch_session&#39;</span>
+<span class="lineno"> 8</span>     <span class="n">post</span> <span class="s1">&#39;reset_api_key&#39;</span>
+<span class="lineno"> 9</span>   <span class="k">end</span>
+<span class="lineno">10</span> <span class="k">end</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span> <span class="n">match</span> <span class="s1">&#39;main&#39;</span><span class="p">,</span> <span class="ss">:controller</span> <span class="o">=&gt;</span> <span class="s1">&#39;main&#39;</span><span class="p">,</span> <span class="ss">:action</span> <span class="o">=&gt;</span> <span class="s1">&#39;index&#39;</span>
+<span class="lineno">13</span> <span class="n">match</span> <span class="s1">&#39;main/about&#39;</span><span class="p">,</span> <span class="ss">:controller</span> <span class="o">=&gt;</span> <span class="s1">&#39;main&#39;</span><span class="p">,</span> <span class="ss">:action</span> <span class="o">=&gt;</span> <span class="s1">&#39;about&#39;</span>
+<span class="lineno">14</span> <span class="n">match</span> <span class="s1">&#39;main/logout&#39;</span><span class="p">,</span> <span class="ss">:controller</span> <span class="o">=&gt;</span> <span class="s1">&#39;main&#39;</span><span class="p">,</span> <span class="ss">:action</span> <span class="o">=&gt;</span> <span class="s1">&#39;logout&#39;</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span> <span class="c1"># Return a 404 when no route is match</span>
+<span class="lineno">17</span> <span class="n">match</span> <span class="s1">&#39;*path&#39;</span><span class="p">,</span> <span class="ss">:controller</span> <span class="o">=&gt;</span> <span class="s1">&#39;main&#39;</span><span class="p">,</span> <span class="ss">:action</span> <span class="o">=&gt;</span> <span class="s1">&#39;page_not_found&#39;</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -991,7 +1021,7 @@ PDF to images, using ImageMagick.</p>
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/98_PDF/2.md">presentation/98_PDF/2.md</a>
+              Source: <a href="presentation/7_routes/2.md">presentation/7_routes/2.md</a>
             </aside>
             
             <aside class="page_number">
@@ -1001,24 +1031,104 @@ PDF to images, using ImageMagick.</p>
         </div>
       </div>
       
-      <!-- slide source: presentation/99_Plagiat/0.md -->
+      <!-- slide source: presentation/97_PGROU2012/0.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>MarkUs - PGROU 2012 (1/3)</h1></header>
+            
+            
+            <section><h2>State of the art</h2>
+<p>Summer 2012, no possibility to follow students' progression over assignments.</p>
+<p>Ask your mentors ;-) --&gt; Benjamin V., Nelle V.</p>
+<h2>Interesting files</h2>
+<ul>
+<li>Look at models related to assignments and students (<em>app/models</em>)</li>
+<li>Look at migrations to create new fields (and/or tables) in database (<em>db/migrate</em>)</li>
+<li>Look at routes (<em>config/routes.rb</em>)</li>
+<li>Database schema (on the wiki and generated with railroady)</li>
+<li>Model schema (generated with railraody)</li>
+</ul>
+<p><em>Generating diagrams</em>:</p>
+<div class="highlight"><pre><span class="lineno">1</span> bundle <span class="nb">exec </span>rake rake -T
+<span class="lineno">2</span> bundle <span class="nb">exec </span>rake diagram:all
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/97_PGROU2012/0.md">presentation/97_PGROU2012/0.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/27
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/97_PGROU2012/1.md -->
       <div class="slide-wrapper">
         <div class="slide">
           <div class="inner">
             
-            <header><h1>MarkUs-Plagiat (1/3)</h1></header>
+            <header><h1>MarkUs - PGROU 2012 (2/3)</h1></header>
             
             
-            <section><h2>State of the art</h2>
-<p>Last year, two students (Benjamin T. and Shion K.) worked on plagiarsim.</p>
-<p>They studied different plagiarism tools and the way to connect them to MarkUs.</p>
-<p>Ask your mentor ;-) --&gt; Nelle V. </p>
-<p>Please read:</p>
+            <section><h2>Please read:</h2>
 <ul>
-<li>Benjamin T. and Shion K. PRGOU report on plagiarism (PAPPL-2010)</li>
-<li>Bertrand M, Guillaume B, Claire V., Charline A., Benjamin W, Karim E. report
-  about the test framework (PGROU-2011), focusing on the Ant part</li>
-<li>Blog posts about plagiarism</li>
+<li>Latest blog posts</li>
+<li>Blog posts concerning remark requests, for models</li>
+</ul>
+<h2>How it sould work?</h2>
+<ol>
+<li>What are the client (École Centrale de Nantes) needs?</li>
+<li>How do you understand the project in terms of architecture, models and views?</li>
+</ol></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="presentation/97_PGROU2012/1.md">presentation/97_PGROU2012/1.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/27
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: presentation/97_PGROU2012/2.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>MarkUs  - PGROU 2012 (3/3)</h1></header>
+            
+            
+            <section><h2>Need help?</h2>
+<ul>
+<li>Ask your mentors</li>
+<li>Go to irc (#markus or #markus-fr)</li>
+<li>Ask the developper mailing list</li>
+<li>Read Rails documentation</li>
 </ul></section>
             
           </div>
@@ -1031,83 +1141,7 @@ PDF to images, using ImageMagick.</p>
           <footer>
             
             <aside class="source">
-              Source: <a href="presentation/99_Plagiat/0.md">presentation/99_Plagiat/0.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              25/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: presentation/99_Plagiat/1.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>MarkUs-Plagiat (2/3)</h1></header>
-            
-            
-            <section><h2>How does the Test Framework works ?</h2>
-<p><img alt="Test Framework" height="308" width="624" src="presentation/99_Plagiat/Automated_testing.jpeg" title="Automated Testing Framework" /></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="presentation/99_Plagiat/1.md">presentation/99_Plagiat/1.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              26/27
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: presentation/99_Plagiat/2.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>MarkUs-Plagiat (3/3)</h1></header>
-            
-            
-            <section><h2>Ant ?</h2>
-<p>Apache Ant is a software tool for automating software build processes. It is
-similar to Make but is implemented using the Java language, requires the Java
-platform, and is best suited to building Java projects.</p>
-<p>The most immediately noticeable difference between Ant and Make is that Ant
-uses XML to describe the build process and its dependencies. By default the XML
-file is named build.xml.</p>
-<h2>Be careful with external linking</h2>
-<ul>
-<li>licenses issues</li>
-<li>Available on different kind of OS ? (Unices such as GNU/Linux and MAC OS X,
-  Microsoft Windows)</li>
-<li>Is it still maintened ?</li>
-</ul>
-<h2>Pro tip</h2>
-<p>Don't hesitate to ask your mentor</p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="presentation/99_Plagiat/2.md">presentation/99_Plagiat/2.md</a>
+              Source: <a href="presentation/97_PGROU2012/2.md">presentation/97_PGROU2012/2.md</a>
             </aside>
             
             <aside class="page_number">
@@ -1252,37 +1286,37 @@ file is named build.xml.</p>
       
       
       <tr id="toc-row-22">
-        <th><a href="#slide22">MarkUs-PDF (1/3)</a></th>
+        <th><a href="#slide22">Routes (1/3)</a></th>
         <td><a href="#slide22">22</a></td>
       </tr>
       
       
       <tr id="toc-row-23">
-        <th><a href="#slide23">MarkUs-PDF (2/3)</a></th>
+        <th><a href="#slide23">Routes (2/3)</a></th>
         <td><a href="#slide23">23</a></td>
       </tr>
       
       
       <tr id="toc-row-24">
-        <th><a href="#slide24">MarkUs-PDF (3/3)</a></th>
+        <th><a href="#slide24">Routes (3/3)</a></th>
         <td><a href="#slide24">24</a></td>
       </tr>
       
       
       <tr id="toc-row-25">
-        <th><a href="#slide25">MarkUs-Plagiat (1/3)</a></th>
+        <th><a href="#slide25">MarkUs - PGROU 2012 (1/3)</a></th>
         <td><a href="#slide25">25</a></td>
       </tr>
       
       
       <tr id="toc-row-26">
-        <th><a href="#slide26">MarkUs-Plagiat (2/3)</a></th>
+        <th><a href="#slide26">MarkUs - PGROU 2012 (2/3)</a></th>
         <td><a href="#slide26">26</a></td>
       </tr>
       
       
       <tr id="toc-row-27">
-        <th><a href="#slide27">MarkUs-Plagiat (3/3)</a></th>
+        <th><a href="#slide27">MarkUs  - PGROU 2012 (3/3)</a></th>
         <td><a href="#slide27">27</a></td>
       </tr>
       

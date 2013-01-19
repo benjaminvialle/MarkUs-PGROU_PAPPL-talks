@@ -328,7 +328,9 @@
             
             
             <section><h2>Find code</h2>
-<p><code>find app/ -name "*" -exec grep -Hn --color "def index" {} \;</code></p></section>
+<p><code>find app/ -name "*" -exec grep -Hn --color "def index" {} \;</code></p>
+<p>or simply use
+<code>git grep "def index"</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -1091,7 +1093,18 @@ Describe the http method used (GET, POST, PUT, DELETE).</p>
             <header><h1>MarkUs  - PAPPL 2013 (3/3)</h1></header>
             
             
-            <section><h2>Need help?</h2>
+            <section><h2>Working on a bug?</h2>
+<ul>
+<li>Create an issue on github if no one exists</li>
+<li>Ask for mentors to put your name in the issue</li>
+<li>Create a branch</li>
+<li>Reproduce the bug</li>
+<li>Create a test reproducing the bug</li>
+<li>Fix the bug</li>
+<li>Commit (with "Closes #xxx" where xxx is the number of the bug)</li>
+<li>Ask for a pull request</li>
+</ul>
+<h2>Need help?</h2>
 <ul>
 <li>Ask your mentors</li>
 <li>Go to irc (#markus or #markus-fr)</li>
